@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minecraft World</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(#87CEEB, #3CB371);
+        color: white;
+        text-align: center;
+    }
+
+    header {
+        background: #2E8B57;
+        padding: 20px;
+        font-size: 32px;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+
+    .card {
+        background: #228B22;
+        border: 4px solid #006400;
+        border-radius: 10px;
+        padding: 20px;
+        width: 250px;
+        box-shadow: 0 0 15px black;
+        transition: transform 0.3s;
+    }
+
+    h2 {
+        margin: 10px 0;
+    }
+
+    .inventory {
+        margin-top: 60px;
+        padding: 30px;
+        background: #556B2F;
+    }
+
+    .tools {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .tool {
+        background: #2F4F4F;
+        padding: 15px;
+        border: 3px solid #000;
+        border-radius: 8px;
+        box-shadow: 0 0 10px black;
+        transition: 0.3s;
+    }
+
+    .tool:hover {
+        background: #444;
+        transform: translateY(-5px);
+    }
+
+</style>
+</head>
+
+<body>
+
+<header>
+    Minecraft Adventure World
+</header>
+
+<section class="characters">
+
+    <div class="card">
+        <img src="data:image/jpeg;base64,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" alt="Steve">
+        <h2>Steve</h2>
+        <p>Brave explorer and master builder.</p>
+    </div>
+
+    <div class="card">
+        <img src="https://www.solarcosa.de/media/image/product/7901/lg/solar-wackelfigur-minecraft-alex.jpg" alt="Alex">
+        <h2>Alex</h2>
+        <p>Creative adventurer and survival expert.</p>
+    </div>
+
+</section>
+
+<section class="inventory">
+    <h2>Tool Equipment Inventory</h2>
+
+    <div class="tools">
+        <div class="tool">Diamond Sword</div>
+        <div class="tool">Iron Pickaxe</div>
+        <div class="tool"> Stone Axe</div>
+        <div class="tool">Bow</div>
+        <div class="tool"> Shield</div>
+        <div class="tool">Diamond Armor</div>
+    </div>
+</section>
+
+</body>
+</html>
