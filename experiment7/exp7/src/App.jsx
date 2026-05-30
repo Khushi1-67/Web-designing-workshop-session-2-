@@ -1,14 +1,21 @@
-import Student from "./coponents/Student";
-import courses from "./data /courses.json";
-
+import Student from "./Student";
 function App() {
-    return (
-        <div>
-            <h1>Student Information</h1>
-            <Student name="khushi" rollno="12345" course="CSE" />
-            <Student name="rahul" rollno="67890" course="ECE" />
-            <Student name="sneha" rollno="54321" course="MECH" />
-        </div>
-};
-
-export default Student;
+return (
+<div>
+<h1>Student Information</h1>
+<Student
+name="Rahul Sharma"
+course="Computer Science"
+marks="85" />
+<Student
+name="Anita Verma"
+course="Information Technology"
+marks="92" />
+<Student
+name="Rohan Gupta"
+course="Electronics"
+marks="78" />
+</div>
+);
+}
+export default App;
